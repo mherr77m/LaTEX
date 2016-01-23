@@ -489,7 +489,79 @@ https://www2.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-aut
 
 \noindent or from my github repository at https://github.com/mherr77m/LaTeX.
 
-The directory that you download contains a bunch of files, but the important ones that you need for your paper are ametsoc.cls, ametsoc2014.bst, template.tex, and references.bib.  The template.tex file is where you will write your paper and references.bib is where you put your references.  The other two files are used for formatting and you shouldn't need to edit them.
+The directory that you download contains a bunch of files, but the important ones that you need for your paper are ametsoc.cls, ametsoc2014.bst, template.tex, and references.bib.  The template.tex file is where you will write your paper and references.bib is where you put your references.  The other two files are used for formatting and you shouldn't need to edit them.  
+
+Let's start with the template.tex file which you can open using TexShop or your desired \LaTeX \ front end.  The first thing that you'll notice is all of the comments.  You can leave comments in your code by using \verb!%!.  The first actual command is defining the document class, which is now defined as ametsoc.  This is where you tell \LaTeX \ that you want to use the AMS template.  The next command \verb!\journal{...}! lets you define which journal you are submitted to, since they don't all use the exact same formatting.  Lines 53 through 91 help you set up your title page.  The last part of the preamble is the abstract and all you have to do is put the text of your abstract within the \verb!\abstract{...}! command.
+
+The main body of the paper is where you will write your paper using all of the tools discussed earlier in this tutorial.  The template also has areas for acknowledgments and appendixes.  AMS journals request that you put all the tables and figure at the end of the paper, so from line 186 to the end is where you would place your tables and figures.
+
+\subsubsection{References}
+
+A very important thing you need to do to make sure your references work in the template is to uncomment lines 182 and 183, \verb!\bibliographystyle{ametsoc2014}! and \\\verb!\bibliography{references}!.  These two lines establish the formatting for the bibliography and the finds your references.  In the template directory, you references will be put into references.bib.
+
+When you open references.bib in TexShop, the top half of the file contains a long list of journal name abbreviations that you can use when defining your references.  At the bottom are sample references that you can delete and replace with your own references.  For this tutorial, I'm only going to discuss one type of reference, a journal article.  Here is an example reference definition,
+
+\hfill
+
+\verb!@article{Lorenz1969,! \\
+\verb!         author = {E. N. Lorenz},! \\
+\verb!         title = {Predictability of a flow which possesses many scales of motion},! \\
+\verb!         journal = TELLUS,!\\
+\verb!         year = {1969},!\\
+\verb!         volume = 21,!\\
+\verb!         pages = {289--307}}!\\
+
+\hfill
+
+The first line is the type of reference, in this case a journal article, which you pass several arguments describing the article.  The first argument, \verb!Lorenz1969b! is the label for the reference.  When you want to use this reference in the paper, you will use this label.  The next two lines are for the authors and title.  The journal argument is where you can use the abbreviations from above, in this case it's not really an abbreviation since the journal name is short.  The final three lines are self explanatory, they are for year, volume, and page numbers of the journal article.
+
+You add all of your references like this to the bottom of references.bib.  The way that referencing works in \LaTeX \ is that when you compile your paper, the program looks through your references.bib file for the label and then puts the reference into your paper.  This means that your references don't have to be in any specific order and you can even have references that you don't end up using in the paper.  
+
+Using the AMS template, there are two commands you can use in your paper to add citations, either \verb!\citet[...]{...}! or \verb!\citep[...]{...}!.  Here are some sample citation commands and how they will appear in the paper,
+
+\hfill
+
+\begin{tabular}{l | l}
+\verb!\citet{jon90}! & Jones et al. (1990)\\
+\verb!\citet[chap. 2]{jon90}! & Jones et al. (1990, chap. 2)\\
+\verb!\citep{jon90}! & (Jones et al. 1990)\\
+\verb!\citep[chap. 2]{jon90}! & (Jones et al. 1990, chap. 2)\\
+\verb!\citep[see][]{jon90}! & (see Jones et al. 1990)\\
+\verb!\citep[see][chap. 2]{jon90}! & (see Jones et al. 1990, chap. 2)\\
+\hline
+\verb!\citet{jon90,jam91}! & Jones et al. (1990); James et al. (1991) \\ 
+\verb!\citep{jon90,jam91}! & (Jones et al. 1990; James et al. 1991) \\ 
+\verb!\citep{jon90,jon91}! & (Jones et al. 1990,1991) 
+\end{tabular}
+
+\hfill
+
+\noindent The final part of using citations is how to compile \LaTeX \ with references.  If you are using TexShop, you'll first have to ``Typeset" using LaTeX from the drop down menu seen in Figure~\ref{env}.  Once that is finished compiling, you'll change the LaTeX option to ``BibTex" and then typeset/compile again.  This compilation should be very quick, then you'll chose LaTeX from the drop down menu once again and compile two more times.  These are all the basics for using the AMS template.  
+
+\subsection{Thesis Template}
+
+The TAMU thesis template is a bit different from the AMS template, and can be found either in my github repository, or from 
+
+\begin{center}
+http://howdy.me
+\end{center}
+
+A large difference with this template is that it is much more modular than the AMS template.  You'll notice that there are several .tex files, luckily they are all named so that you know what each file is used for.  The main .tex file is tamuthesis.tex, which is the file you will compile.  You will not have to modify this file very often.  The first changes that need to be made start on line 55 and goes through line 68.  This is where you define your title, author, committee, etc.  After you define your title page, there are several \verb!\include! commands which are used to call the other .tex files.  For example, you will write your abstract in abstract.tex, then tamuthesis.tex will compile the abstract and add it to the main paper.  The only other thing you should need to change is to include additional sections as you need them, since only three are included in this template.  
+
+The other .tex files are where you will actually write your paper.  Each .tex file already has some example text in them, so it is fairly straight forward on how to edit them and add your text.  One thing to notice is that figures are now placed in a ``figures" directory, so you'll need to make sure to include the directory name when inserting the figures.  For an example of this, see line 34 of section1.tex.  
+
+References in this template are similar to the AMS template.  There is a references.bib file which contains lots of sample references.  You can add your references to this file and then cite them in your paper just like you would for the AMS template.  When you are ready to compile, you will compile tamuthesis.tex and you will compile it the same was as for an AMS paper.
+
+\section{Wrap Up}
+
+This tutorial only covered the basics of how to use \LaTeX \ to write your journal article or thesis.  There are many resources for any other questions you have.  If you have a problem in \LaTeX \ there is a good chance someone else has had the same problem and has solved it.  Here are some websites to check out for more help.
+
+\begin{center}
+https://en.wikibooks.org/wiki/LaTeX\\
+https://www.sharelatex.com/learn/Main\_Page \\
+http://tex.stackexchange.com/help\\
+https://latex-project.org/ftp.html 
+\end{center}
 
 \end{document}
 
