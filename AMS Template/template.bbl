@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\renewcommand{\UrlFont}{\rmfamily}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Knutti et~al.(2008)}]{Knutti2008}
+Knutti, R., and Coauthors, 2008: A review of uncertainties in global
+  temperature projections over the twenty-first century. \textit{J. Climate},
+  \textbf{21}, 2651--2663, \doi{10.1175/2007JCLI2119.1}.
+
+\end{thebibliography}
