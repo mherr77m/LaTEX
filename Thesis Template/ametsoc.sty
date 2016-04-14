@@ -190,21 +190,21 @@
 %
 % Remove colon in \caption, AMS style is to have a period after the
 % figure number
-\long\def\@makecaption#1#2{%
+%\long\def\@makecaption#1#2{%
 % Create the proper style for the figure and table captions.
-\renewcommand{\figurename}{\textsc{Fig.}}
-\renewcommand{\tablename}{\textsc{Table}}
-\renewcommand{\thefigure}{\arabic{figure}.}
-\renewcommand{\thetable}{\arabic{table}.}
-\vskip\abovecaptionskip
-\sbox\@tempboxa{#1~~#2}%
-\ifdim \wd\@tempboxa >\hsize
-#1~~#2\par%
-\else
-\global \@minipagefalse
-\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
-\fi
-\vskip\belowcaptionskip}
+%\renewcommand{\figurename}{\textsc{Fig.}}
+%\renewcommand{\tablename}{\textsc{Table}}
+%\renewcommand{\thefigure}{\arabic{figure}.}
+%\renewcommand{\thetable}{\arabic{table}.}
+%\vskip\abovecaptionskip
+%\sbox\@tempboxa{#1~~#2}%
+%\ifdim \wd\@tempboxa >\hsize
+%#1~~#2\par%
+%\else
+%\global \@minipagefalse
+%\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+%\fi
+%\vskip\belowcaptionskip}
 %
 \renewcommand{\abstractname}{\uppercase{Abstract}}%
 %
