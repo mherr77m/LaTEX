@@ -1,0 +1,13 @@
+\noaddvspace 
+\linespread {2.1}\selectfont 
+{FIGURE}\nobreakspace {}\hfill {Page} \par 
+\afterpage {\nobreakspace {}\hfill \par \vspace \medskipamount }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Add More Chapters into TAMUthesis\_Template.tex}}{2}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Open CMD (Command Line Interface) under Windows}}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Compile .tex File\relax }}{6}{figure.caption.11}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

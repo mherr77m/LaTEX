@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TAMUthesis_Template_OpenThisFileToCompile.aux
+A level-1 auxiliary file: data/cover.aux
+A level-1 auxiliary file: data/Abstract.aux
+A level-1 auxiliary file: data/Dedication.aux
+A level-1 auxiliary file: data/Acknowledgment.aux
+A level-1 auxiliary file: data/Nomenclature.aux
+A level-1 auxiliary file: data/chapterI.aux
+A level-1 auxiliary file: data/chapterII.aux
+A level-1 auxiliary file: data/chapterIII.aux
+A level-1 auxiliary file: data/chapterIV.aux
+The style file: ametsoc.bst
+A level-1 auxiliary file: data/Appendix.aux
+Database file #1: data/myReference.bib
+Warning--I'm ignoring Andraka:1998:SCA:275107.275139's extra "series" field
+--line 42 of file data/myReference.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in Andraka:1998:SCA:275107.275139
+Warning--empty journal in Barrera:2013:APC:2482767.2482778
+You've used 5 entries,
+            3493 wiz_defined-function locations,
+            746 strings with 6624 characters,
+and the built_in function-call counts, 5732 in all, are:
+= -- 725
+> -- 117
+< -- 3
++ -- 82
+- -- 30
+* -- 269
+:= -- 550
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 35
+chr.to.int$ -- 5
+cite$ -- 7
+duplicate$ -- 624
+empty$ -- 312
+format.name$ -- 37
+if$ -- 1172
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 48
+newline$ -- 26
+num.names$ -- 20
+pop$ -- 223
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 403
+stack$ -- 0
+substring$ -- 318
+swap$ -- 529
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 45
+warning$ -- 2
+while$ -- 32
+width$ -- 0
+write$ -- 70
+(There were 3 warnings)
